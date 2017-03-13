@@ -86,8 +86,9 @@ var split = function(circle){
     var r = parseInt(circle.getAttribute("r"));
 
     var currentCircle = drawCircle(xcor + 1,ycor,r/2);
-    currentCircle.fill = circle.getAttribute("fill");
-    console.log(currentCircle.fill);
+
+    currentCircle.setAttribute("fill",circle.getAttribute("fill"));
+
     var newCircle = drawCircle(xcor - 1 ,ycor,r/2);
 
     
@@ -98,9 +99,6 @@ var split = function(circle){
 
     svg.appendChild(newCircle);
     svg.appendChild(currentCircle);
-    console.log(circle.getAttribute("fill"));
-    console.log(currentCircle.getAttribute("fill"));
-    console.log(newCircle.getAttribute("fill"));;
 
 };
 
